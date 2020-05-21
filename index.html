@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze generator</title>
+
+    <script src="./js/maze.js"></script>
+    <script src="./js/cell.js"></script>
+    <script src="./js/p5.js"></script>
+    <script src="./js/three.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="./js/orbitcontrols.js"></script>
+</head>
+<body>
+    
+    <div id="containerdiv">
+        <div id="2dview">
+
+        </div>
+
+        <div id="3dview">
+            
+        </div>
+
+        <div id="controlsdiv">
+
+            <div class="control-item">
+                <label for="xdivs">X divs</label>
+                <input type="range" id="xdivs" name="xdivs" min="1" max="10" value="1" step="1" oninput="xdivschanged(this)">
+                <p id="xlabel" class="valuelabel"></p>
+            </div>
+            <div class="control-item">
+                <label for="ydivs">Y divs</label>
+                <input type="range" id="ydivs" name="ydivs" min="1" max="10" value="1" step="1" oninput="ydivschanged(this)">
+                <p id="ylabel" class="valuelabel"></p>
+            </div>
+            <div class="control-item">
+                <label for="zdivs">Z divs</label>
+                <input type="range" id="zdivs" name="zdivs" min="1" max="10" value="1" step="1" oninput="zdivschanged(this)">
+                <p id="zlabel" class="valuelabel"></p>
+            </div>
+  
+            <div class="control-item">
+                <button onclick="confirmMazeSize()">Lock maze size</button>
+            </div>
+        </div>
+
+        <div id="manipulationdiv">
+
+            <div id="initial-final-group">
+                <div class="control-item">
+                    <button onclick="setInitialCellMode()">Set initial cell</button>
+                </div>
+                <div class="control-item">
+                    <button onclick="setFinalCellMode()">Set final cell</button>
+                </div>
+                <div class="control-item">
+                    <button onclick="fixInitialAndFinalCells()">Fix Initial and final</button>
+                </div>
+            </div>
+        </div>
+        <script src="./js/main.js"></script>
+    </div>
+</body>
+</html>

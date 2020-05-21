@@ -1,0 +1,15 @@
+
+#containerdiv{
+    display: grid;
+grid-template-columns: 400px 400px auto;
+}
+
+
+#controlsdiv{
+    display: grid;
+}
+
+
+.valuelabel{
+    display: inline;
+}
